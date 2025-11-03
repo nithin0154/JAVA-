@@ -1,4 +1,3 @@
-package Functions;
 
 public class f1 {
     public static void printFn(){
