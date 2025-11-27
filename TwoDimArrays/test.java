@@ -55,7 +55,7 @@ public class test {
         search(matrix, 25);
        System.out.println( matrixMax(matrix));
        System.out.println( matrixMin(matrix));
-
+        sc.close();
     }
     
 }

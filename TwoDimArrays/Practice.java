@@ -50,8 +50,8 @@ public class Practice {
          int[][] nums = { {1,4,9},{11,4,3},{2,2,3} };
 
          
-        // Counter(array);
-        // SumFinder(nums);
+        Counter(array);
+        SumFinder(nums);
         transpose(array);
     }
 }
