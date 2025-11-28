@@ -1,7 +1,4 @@
 package TwoDimArrays;
-
-import Arrays.funcarrays;
-
 public class Practice {
 
     //Counter of a key
