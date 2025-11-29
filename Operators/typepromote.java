@@ -5,7 +5,7 @@ public class typepromote {
         byte c=12;
         byte bt = (byte)(a+ b+c);//Gives the error as "possible lossy conversion from int to byte"
                         // Even though there is no int type variable present 
-                        //It is happend because the compiler automatically converts 
+                        //It is happend because the compiler automatically converts  
                         //byte,char,short to int when evaluating the expression
         System.out.println(bt);
 

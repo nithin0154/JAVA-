@@ -20,7 +20,6 @@ public class problem {
 
     public static void main(String[] args) {
         String direction = "WNEENESENNN";
-        String dir = "NS";
-        shortestPath(dir);
+        shortestPath(direction);
     }
 }

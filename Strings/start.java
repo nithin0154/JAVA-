@@ -1,7 +1,4 @@
 package Strings;
-
-import java.util.Scanner;
-
 public class start {
     public static void print(String str) {
         for (int i = 0; i < str.length(); i++) {
