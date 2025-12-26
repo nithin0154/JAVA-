@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "permutations",
+      "request": "launch",
+      "mainClass": "Backtracking.permutations",
+      "projectName": "JAVA_4485086e"
+    },
+    {
+      "type": "java",
+      "name": "Mergesort",
+      "request": "launch",
+      "mainClass": "Mergesort",
+      "projectName": "JAVA_4485086e"
+    },
+    {
+      "type": "java",
       "name": "powerOfn",
       "request": "launch",
       "mainClass": "Recursion.powerOfn",
