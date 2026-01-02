@@ -225,8 +225,43 @@ public class LinkedListNonGeneric {
         return true;
     }
 
+    //Find if there is cycle in the LL or not?
+    //Floyd's cycle finding algorithm is used to find this Problem exists or not.
+     public static boolean isInCycle(){
+        Node slow = head;
+        Node fast= head;
+        while (fast!=null && fast.next!=null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow==fast) {
+                return true;
+            }
+        }
+        return false;
+     }
+     public static void removeCycle(){
+         Node slow = head;
+         Node fast = head;
+         while (fast != null && fast.next != null) {
+             slow = slow.next;
+             fast = fast.next.next;
+             if (slow == fast) {
+                break;
+             }
+         }
+         slow = head;
+         Node prev= null;
+         while (fast!=slow) {
+            prev=fast;
+            fast=fast.next;
+            slow=slow.next;
+         }
+         prev.next=null;
+     }
+
+
     public static void main(String[] args) {
-        LinkedListNonGeneric ll = new LinkedListNonGeneric();
+        // LinkedListNonGeneric ll = new LinkedListNonGeneric();
         // LinkedList<Integer> ll2 = new LinkedList<>();
         // ll2.add(5, 8);
         // ll.addFirst(1);
@@ -246,13 +281,23 @@ public class LinkedListNonGeneric {
         // // ll.reverse();
         // ll.print();
         // System.out.println(ll.removeNthFromEnd(1));
-        ll.print();
-        ll.addFirst(1);
-        ll.addFirst(2);
-        ll.addLast(2);
-        ll.print();
-        System.out.println(ll.palindromeCheck());
-        System.out.println(ll.isPalindromeByNoExtraSpace());
+        // ll.print();
+        // ll.addFirst(1);
+        // ll.addFirst(2);
+        // ll.addLast(2);
+        // ll.print();
+        // System.out.println(ll.palindromeCheck());
+        // System.out.println(ll.isPalindromeByNoExtraSpace());
+
+            head= new Node(1);
+            Node temp =new Node(2);
+            head.next= temp;
+            head.next.next = new Node(3);
+            head.next.next.next = temp;
+            
+        System.out.println(isInCycle());
+        removeCycle();
+        System.out.println(isInCycle());
     }
 
 }
