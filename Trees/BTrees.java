@@ -1,4 +1,4 @@
-
+package Trees;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -156,6 +156,7 @@ public class BTrees {
         int currHeight = (Math.max(left.height, right.height)+1);
         return new Info(currHeight, currDia);
     }
+    
 
 
     public static void main(String[] args) {
@@ -164,23 +165,23 @@ public class BTrees {
         Node root = tree.buildTree(nodes);
         // System.out.println(root.data);
 
-        // tree.preOrderPrinter(root);
-        // System.out.println();
-        // System.out.println("-----------");
-        // tree.inOrder(root);
-        // System.out.println();
-        // System.out.println("-----------");
-        // tree.postOrder(root);
-        // System.out.println();
-
-        tree.levelOrder(root);
-        System.out.println(heightOfTree(root));
+        tree.preOrderPrinter(root);
         System.out.println();
-        System.out.println("The total no of nodes in the tree: "+ countOfNodes(root));
-        System.out.println("The sum of values of all the nodes: " + sumOfNodes(root));
-        System.out.println("The diameter of the tree:"+treeDiameter(root));
-        Info obj = diaCalculator(root);
-        System.out.println("The diameter of the tree: " + obj.diameter+", Height : "+ obj.height);
+        System.out.println("-----------");
+        tree.inOrder(root);
+        System.out.println();
+        System.out.println("-----------");
+        tree.postOrder(root);
+        System.out.println();
+
+        // tree.levelOrder(root);
+        // System.out.println(heightOfTree(root));
+        // System.out.println();
+        // System.out.println("The total no of nodes in the tree: "+ countOfNodes(root));
+        // System.out.println("The sum of values of all the nodes: " + sumOfNodes(root));
+        // System.out.println("The diameter of the tree:"+treeDiameter(root));
+        // Info obj = diaCalculator(root);
+        // System.out.println("The diameter of the tree: " + obj.diameter+", Height : "+ obj.height);
 
     }
 }
